@@ -1,0 +1,44 @@
+{
+    "type": "object",
+    "name": "C++ Application Monitor",
+    "description": "http://wiki.office.aol.com/wiki/C%2B%2B_Application_Monitoring",
+    "properties": {
+    	"root": {
+    		"description": "root",
+    		"type": "object"
+    		"properties": {
+    			"monitoring": {
+		    		"description": "root",
+		    		"type": "object"
+					"properties": {
+						"application" : {
+				    		"description": "application purpose",
+				    		"type": "string"
+						},
+						"persistence": {
+				    		"description": "persistence location",
+				    		"type": "string"
+						},
+						"collectors": {
+				    		"description": "persistence location",
+				    		"type": "array",
+				    		"items": {
+    			                "type": "object",
+				                "name": "person",
+				                "properties": {
+				                    "name": { "type": "string", "required": true },
+				                    "type": { "type": "string" },
+				                    "sourceId": { "type": "string" },
+				                    "maxSize": { "type": "int" },
+				                    "maxTime": { "type": "int" },
+				                    "pushTrigger": { "type": "string" }
+				                    } 
+				    		}
+						},
+						
+					}    				
+    			}
+    		}
+    	}
+    }
+}
